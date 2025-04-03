@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem, ipsum dolor.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            filter: blur(5px);
+
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+        .swiper-slide img {
+            max-width: 120px;
+            margin: auto;
+        }
+
+
+        .section-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .section-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="absolute top-0 left-0 w-full p-5 flex justify-between items-center z-10">
+        <div class="text-white text-xl font-bold flex items-center">
+            <img src="./assets/images/logo-dark.svg" alt="" class="w-20">
+        </div>
+        <button class="text-white text-2xl focus:outline-none " id="menu-toggle">
+            ☰
+        </button>
+    </nav>
+    <section class="relative min-h-[700px]  flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 slider">
+            <div class="slide active" style="background-image: url('./assets/images/slide-2.jpg');"></div>
+            <div class="slide" style="background-image: url('./assets/images/slide-1.jpg');"></div>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 section-animate">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Lorem ipsum dolor sit <br>amet <br></h1>
+            <p class="text-lg md:text-xl mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button
+                class="px-6 py-3 text-white font-semibold text-lg hover:opacity-90 transition-opacity bg-gradient-to-r from-[#00c4d1] to-[#00cc92]">
+                Lorem ipsum
+                <span class="ml-2">→</span>
+            </button>
+        </div>
+    </section>
+    
+
+
+
+<section class="max-w-6xl mx-auto px-6 py-12 ">
+    <div class="grid md:grid-cols-[2fr_1fr_1fr] gap-8 items-stretch">
+        <div class="md:col-span-1 section-animate">
+            <h6 class="text-sm font-bold text-gray-600 uppercase">Lorem Ipsum Dolor Sit Amet</h6>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </h2>
+          
+            <p class="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac orci et nisl lobortis auctor. Sed ac
+                 libero vestibulum, aliquet dui sed, condimentum eros. Nulla facilisi. Vivamus non justo mollis, volutpat dui id
+                 , pharetra lectus. Ut at ligula turpis. Aenean venenatis magna eu nisl auctor, euismod.
+            </p>
+            <div class="inline-block p-[2px] bg-gradient-to-r from-[#00c4d1] to-[#00cc92] ">
+                <button class="px-4 py-2 border-2 border-transparent bg-white text-black font-semibold ">
+                    LOREM IPSUM
+                </button>
+            </div>
+        </div>
+        <div class="md:col-span-1 flex justify-center items-center bg-white">
+            <img src="./assets/images/section-1.jpg" alt="Mobile" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:col-span-1 bg-[#00c4d1] text-white p-7 flex items-center justify-center flex-col h-full">
+            <p class="text-lg text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit blandit massa enim.
+                Nullam id varius nunc. Vivamus bibendum mex.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Third section -->
+<article class="bg-gray-100 section-animate">
+    <section class="max-w-6xl mx-auto px-6 py-12 ">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-[#00c4d1]">
+                    <img src="https://img.icons8.com/ios/50/00c4d1/user-male-circle.png" alt="User Icon">
+                </div>
+                <div class="max-w-sm text-center">
+                    <h3 class="text-lg font-bold text-gray-900">Lorem ipsum</h3>
+                    <p class="text-gray-500 text-center text-base leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur rhoncus nulla dui, in dapibus magna aliquam et.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-[#00c4d1]">
+                    <img src="https://img.icons8.com/ios/50/00c4d1/stack.png" alt="Stack Icon">
+                </div>
+                <div class="max-w-sm text-center">
+                    <h3 class="text-lg font-bold text-gray-900">Lorem ipsum</h3>
+                    <p class="text-gray-500 text-center text-base leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur rhoncus nulla dui, in dapibus magna aliquam et.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-[#00c4d1]">
+                    <img src="https://img.icons8.com/ios/50/00c4d1/monitor.png" alt="Monitor Icon">
+                </div>
+                <div class="max-w-sm text-center">
+                    <div class="max-w-sm text-center">
+                        <h3 class="text-lg font-bold text-gray-900">Lorem ipsum</h3>
+                        <p class="text-gray-500 text-center text-base leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur rhoncus nulla dui, in dapibus magna aliquam et.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</article>
+
+<!-- 4th section -->
+ <article class="bg-gray-700">
+    <div class="text-center text-white px-8 py-12">
+        <h1 class="text-4xl md:text-3xl font-bold mb-4">Lorem ipsum</h1>
+        <p class=" md:text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button
+            class="px-6 py-3  text-white font-semibold text-lg hover:opacity-90 transition-opacity bg-gradient-to-r from-[#00c4d1] to-[#00cc92]">
+            Lorem ipsum
+            <span class="ml-2">→</span>
+        </button>
+    </div>
+ </article>
+
+ <!-- 5th section -->
+ <article class="bg-white flex justify-center items-center py-12 px-6">
+    <div class="max-w-6xl w-full">  
+        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10">
+            <section class="text-left">
+                <p class="text-gray-500 font-bold uppercase text-sm">Lorem Ipsum</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 leading-tight">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h1>
+            </section>
+            <div class="text-center">
+                <div class="flex justify-center items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold">Lorem Ipsum</h3>
+                <p class="text-gray-500 text-base mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.
+                </p>
+            </div>
+
+            <!-- Box 3 - Equal Width -->
+            <div class="text-center">
+                <div class="flex justify-center items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-8-8v16" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold">Lorem Ipsum</h3>
+                <p class="text-gray-500 text-base mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- 5th section -->
+<section class=" flex justify-center items-center min-h-[200px]  ">
+    <div class="w-full max-w-5xl px-4">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">               
+                <div class="swiper-slide"><img src="./assets/images/logo-1.svg" alt="Logo 1"></div>
+                <div class="swiper-slide"><img src="./assets/images/logo-2.svg" alt="Logo 2"></div>
+                <div class="swiper-slide"><img src="./assets/images/logo-3.svg" alt="Logo 3"></div>
+                <div class="swiper-slide"><img src="./assets/images/logo-4.svg" alt="Logo 4"></div>
+                <div class="swiper-slide"><img src="./assets/images/logo-5.svg" alt="Logo 5"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 6th section -->
+ 
+  <section class="bg-teal-500 text-white text-center py-16">
+    <h2 class="text-2xl md:text-4xl ">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <button class="mt-6 bg-white text-black px-6 py-2 font-semibold">Lorem Ipsum  <span class="ml-2">→</span></button>    
+</section>
+  <!-- Footer -->
+  <footer class=" text-center py-4">
+    <p>&copy; 2025 Lorem Ipsum. All Rights Reserved.</p>
+</footer>
+    <script>
+
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('hidden');
+        });
+
+        // Slider Functionality
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 2000); // Change slide every 5 seconds
+
+
+        // logo slider
+        function initializeSwiper() {
+            let isMobile = window.innerWidth < 768; // Check if screen is mobile size
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: isMobile ? 1:2, // 2 slides for mobile, 5 for larger screens
+                spaceBetween: 30,
+                loop: isMobile, // Looping only in mobile view
+                autoplay: isMobile ? {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                } : false, // Autoplay only on mobile
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 5 },
+                }
+            });
+        }
+
+        initializeSwiper(); // Initialize Swiper
+
+        // Reinitialize Swiper when window resizes
+        window.addEventListener('resize', () => {
+            document.querySelector(".swiper").swiper.destroy(true, true); // Destroy previous instance
+            initializeSwiper(); // Reinitialize Swiper
+        });
+
+            // Section animation on scroll
+            function checkVisibility() {
+            const sections = document.querySelectorAll('.section-animate');
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+
+</html>
